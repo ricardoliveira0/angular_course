@@ -10,22 +10,18 @@ import {
 import { ListarTarefaComponent } from './listar';
 import { CadastrarTarefaComponent } from './cadastrar';
 import { EditarTarefaComponent } from './editar';
-import { TarefasRoutingModule } from './tarefas-routing.module';
-import { TarefasRoutingComponent } from './tarefas-routing.component';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
-    FormsModule,
-    TarefasRoutingModule
+    FormsModule
   ],
   declarations: [
   	ListarTarefaComponent,
   	CadastrarTarefaComponent,
   	EditarTarefaComponent,
-  	TarefaConcluidaDirective,
-    TarefasRoutingComponent
+  	TarefaConcluidaDirective
   ],
   providers: [
   	TarefaService

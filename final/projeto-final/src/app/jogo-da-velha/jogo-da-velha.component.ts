@@ -45,7 +45,6 @@ export class JogoDaVelhaComponent implements OnInit {
   /**
    * Inicializa os dados de um novo jogo.
    *
-   * @param any $event
    * @return void
    */
   iniciarJogo($event: any): void {
@@ -112,7 +111,6 @@ export class JogoDaVelhaComponent implements OnInit {
   /**
    * Inicia um novo jogo.
    * 
-   * @param any $event
    * @return void
    */
   novoJogo($event): void {

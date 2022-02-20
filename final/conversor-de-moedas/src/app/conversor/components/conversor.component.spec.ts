@@ -1,32 +1,37 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
-import { ConversorComponent } from './conversor.component';
 import { MoedaService, ConversorService } from '../services';
 import { NumeroDirective } from '../directives';
 import { DataBrPipe } from '../pipes';
 import { ModalCotacaoComponent } from '../utils';
 
+import { ConversorComponent } from './conversor.component';
+
 describe('ConversorComponent', () => {
   let component: ConversorComponent;
   let fixture: ComponentFixture<ConversorComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ 
+      declarations: [
         ConversorComponent,
         NumeroDirective,
-        DataBrPipe,
-        ModalCotacaoComponent
+        ModalCotacaoComponent,
+        DataBrPipe
+      ],
+      imports: [
+        FormsModule,
+        HttpClientModule
+      ],
+      schemas: [
+        CUSTOM_ELEMENTS_SCHEMA
       ],
       providers: [
         MoedaService,
         ConversorService
-      ],
-      imports: [
-        FormsModule,
-        HttpModule
       ]
     })
     .compileComponents();

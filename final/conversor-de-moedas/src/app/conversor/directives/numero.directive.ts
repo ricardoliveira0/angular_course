@@ -24,7 +24,7 @@ export class NumeroDirective implements ControlValueAccessor {
   constructor(private el: ElementRef) {}
 
   /**
-   * Implementa evento de keyup para o elemento da diretiva.
+   * Implementa evento de keyup para o elemnto da diretiva.
    * 
    * @param any $event
    */

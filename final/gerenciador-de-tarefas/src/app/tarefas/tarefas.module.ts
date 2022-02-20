@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 import { 
-  TarefaService,
+  TarefaService, 
   TarefaConcluidaDirective 
 } from './shared';
 import { ListarTarefaComponent } from './listar';

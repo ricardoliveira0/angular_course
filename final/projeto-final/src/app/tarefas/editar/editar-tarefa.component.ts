@@ -11,7 +11,7 @@ import { TarefaService, Tarefa } from '../shared';
 })
 export class EditarTarefaComponent implements OnInit {
 
-  @ViewChild('formTarefa') formTarefa: NgForm;
+  @ViewChild('formTarefa', { static: true }) formTarefa: NgForm;
   tarefa: Tarefa;
 
   constructor(private tarefaService: TarefaService,

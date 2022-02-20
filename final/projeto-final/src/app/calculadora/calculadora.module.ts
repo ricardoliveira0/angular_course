@@ -3,17 +3,16 @@ import { CommonModule } from '@angular/common';
 
 import { CalculadoraComponent } from './components';
 import { CalculadoraService } from './services';
-import { CalculadoraRoutingModule } from './calculadora-routing.module';
-import { CalculadoraRoutingComponent } from './calculadora-routing.component';
 
 @NgModule({
   imports: [
-    CommonModule,
-    CalculadoraRoutingModule
+    CommonModule
   ],
   declarations: [
-  	CalculadoraComponent,
-  	CalculadoraRoutingComponent
+  	CalculadoraComponent
+  ],
+  exports: [
+  	CalculadoraComponent
   ],
   providers: [
   	CalculadoraService

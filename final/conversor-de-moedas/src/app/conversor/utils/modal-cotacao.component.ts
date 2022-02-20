@@ -1,16 +1,16 @@
 import { 
-	Component, Input, Output, EventEmitter, OnInit
+	Component, Input, Output, EventEmitter 
 } from '@angular/core';
 
-import { ConversaoResponse, Conversao } from '../models/';
-import { ConversorService } from '../services';
+import { ConversaoResponse } from '../models/conversao-response.model';
+import { Conversao } from '../models/conversao.model';
+import { ConversorService } from '../services/conversor.service';
 
 @Component({
-  selector: 'modal-cotacao',
-  templateUrl: './modal-cotacao.component.html',
-  styleUrls: ['./modal-cotacao.component.css']
+	selector: 'modal-cotacao',
+	templateUrl: './modal-cotacao.component.html'
 })
-export class ModalCotacaoComponent implements OnInit {
+export class ModalCotacaoComponent {
 
 	@Input() id: string;
 	@Input() conversaoResponse: ConversaoResponse;
@@ -18,9 +18,6 @@ export class ModalCotacaoComponent implements OnInit {
 	@Output() onConfirm: EventEmitter<any> = new EventEmitter<any>();
 
 	constructor(private conversorService: ConversorService) {}
-
-	ngOnInit() {
-  	}
 
 	novaConsulta() {
 		this.onConfirm.emit();

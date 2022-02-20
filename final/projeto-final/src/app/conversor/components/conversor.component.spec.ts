@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { MoedaService, ConversorService } from '../services';
@@ -14,7 +14,7 @@ describe('ConversorComponent', () => {
   let component: ConversorComponent;
   let fixture: ComponentFixture<ConversorComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ 
         ConversorComponent,
@@ -24,7 +24,7 @@ describe('ConversorComponent', () => {
       ],
       imports: [
         FormsModule,
-        HttpModule
+        HttpClientModule
       ],
       schemas: [
         CUSTOM_ELEMENTS_SCHEMA

@@ -11,12 +11,12 @@ import { MoedaService, ConversorService } from '../services';
 })
 export class ConversorComponent implements OnInit {
 
-  private moedas: Moeda[];
-  private conversao: Conversao;
-  private possuiErro: boolean;
-  private conversaoResponse: ConversaoResponse;
+  moedas: Moeda[];
+  conversao: Conversao;
+  possuiErro: boolean;
+  conversaoResponse: ConversaoResponse;
 
-  @ViewChild("conversaoForm") conversaoForm: NgForm;
+  @ViewChild("conversaoForm", { static: true }) conversaoForm: NgForm;
 
   constructor(
     private moedaService: MoedaService,
@@ -33,7 +33,7 @@ export class ConversorComponent implements OnInit {
    * @return void
    */
   init(): void {
-  	this.conversao = new Conversao('USD', 'BRL', null);
+  	this.conversao = new Conversao('EUR', 'BRL', null);
   	this.possuiErro = false;
   }
 

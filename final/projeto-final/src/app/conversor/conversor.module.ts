@@ -1,29 +1,28 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { ConversorComponent } from './components';
 import { MoedaService, ConversorService } from './services';
 import { NumeroDirective } from './directives';
 import { ModalCotacaoComponent } from './utils';
 import { DataBrPipe } from './pipes';
-import { ConversorRoutingComponent } from './conversor-routing.component';
-import { ConversorRoutingModule } from './conversor-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    HttpModule,
-    ConversorRoutingModule
+    HttpClientModule
   ],
   declarations: [
   	ConversorComponent,
   	NumeroDirective,
   	ModalCotacaoComponent,
-  	DataBrPipe,
-    ConversorRoutingComponent
+  	DataBrPipe
+  ],
+  exports: [
+  	ConversorComponent
   ],
   providers: [
   	MoedaService,

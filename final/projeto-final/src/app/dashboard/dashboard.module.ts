@@ -3,17 +3,16 @@ import { CommonModule } from '@angular/common';
 
 import { DashboardComponent } from './dashboard.component';
 import { DadosService } from './dados.service';
-import { DashboardRoutingComponent } from './dashboard-routing.component';
-import { DashboardRoutingModule } from './dashboard-routing.module';
 
 @NgModule({
   imports: [
-    CommonModule,
-    DashboardRoutingModule
+    CommonModule
   ],
   declarations: [
-  	DashboardComponent,
-  	DashboardRoutingComponent
+  	DashboardComponent
+  ],
+  exports: [
+  	DashboardComponent
   ],
   providers: [
   	DadosService

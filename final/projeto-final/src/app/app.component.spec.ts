@@ -1,20 +1,19 @@
-import { TestBed, async } from '@angular/core/testing';
-
+import { TestBed, waitForAsync } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
-  beforeEach(async(() => {
-    /*TestBed.configureTestingModule({
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
       declarations: [
         AppComponent
       ],
-    }).compileComponents();*/
+    }).compileComponents();
   }));
 
-  it('should create the app', async(() => {
-    /*const fixture = TestBed.createComponent(AppComponent);
+  it('should create the app', () => {
+    const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();*/
-  }));
+    expect(app).toBeTruthy();
+  });
 
 });

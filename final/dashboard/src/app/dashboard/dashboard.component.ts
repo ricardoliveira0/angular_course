@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-//import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 import { DadosService } from './dados.service';
 
@@ -67,7 +67,7 @@ export class DashboardComponent implements OnInit {
   }
 
   /**
-   * Exibe o gráfico Pie Chart em 3D. 
+   * Exibe o gráfico Pie Chart em 3D.
    *
    * @return void
    */
@@ -114,7 +114,7 @@ export class DashboardComponent implements OnInit {
   exibirLineChart(): void {
   	const el = document.getElementById('line_chart');
     const chart = new google.visualization.LineChart(el);
-    
+
     chart.draw(this.obterDataTable(), this.obterOpcoes());
   }
 
@@ -126,7 +126,7 @@ export class DashboardComponent implements OnInit {
   exibirColumnChart(): void {
   	const el = document.getElementById('column_chart');
     const chart = new google.visualization.ColumnChart(el);
-    
+
     chart.draw(this.obterDataTable(), this.obterOpcoes());
   }
 
