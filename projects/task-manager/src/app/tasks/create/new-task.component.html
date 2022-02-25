@@ -1,21 +1,23 @@
 <h1>Create new task</h1>
 
 <div class="well">
-    <form >
+    <form #taskForm="ngForm">
         <div class="form-group">
-        <label for="nome">Task:</label>
+        <label for="name">Task:</label>
         <input 
             type="text"
             class="form-control"
-            id="nome"
-            name="nome"
+            id="name"
+            name="name"
+            [(ngModel)]="task.name"
+            #name="ngModel"
             minlength="5" 
             required> 
-            <div class="alert alert-danger">
-                <div>
+            <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+                <div *ngIf="name.errors?.['required']">
                     Insert the task.
                 </div>
-                <div >
+                <div *ngIf="name.errors?.['minlength']">
                     Task name must contain 5 characters.
                 </div>
             </div>
@@ -24,8 +26,10 @@
             <input 
                 type="submit"
                 class="btn btn-success"
-                value="Confirm">
-            <a class="btn btn-default">
+                (click)="create()"
+                value="Confirm"
+                [disabled]="!taskForm.form.valid">
+            <a class="btn btn-default" [routerLink]="['/tasks']">
                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Back
             </a>
         </div>
