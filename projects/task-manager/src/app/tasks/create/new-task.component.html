@@ -1,0 +1,33 @@
+<h1>Create new task</h1>
+
+<div class="well">
+    <form >
+        <div class="form-group">
+        <label for="nome">Task:</label>
+        <input 
+            type="text"
+            class="form-control"
+            id="nome"
+            name="nome"
+            minlength="5" 
+            required> 
+            <div class="alert alert-danger">
+                <div>
+                    Insert the task.
+                </div>
+                <div >
+                    Task name must contain 5 characters.
+                </div>
+            </div>
+        </div>
+        <div class="form-group text-center">
+            <input 
+                type="submit"
+                class="btn btn-success"
+                value="Confirm">
+            <a class="btn btn-default">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Back
+            </a>
+        </div>
+    </form>
+</div>
