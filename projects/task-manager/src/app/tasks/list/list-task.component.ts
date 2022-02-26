@@ -32,4 +32,13 @@ export class ListTaskComponent implements OnInit {
 
   }
 
+  changeStatus(task: Task): void {
+
+    if(confirm('Do you wish to change task "' + task.name + '" status?')) {
+      this.taskService.updateStatus(task.id);
+      this.tasks = this.listTasks();
+    }
+
+  }
+
 }

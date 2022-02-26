@@ -13,11 +13,11 @@
         </tr>
 
         <tr *ngFor="let task of tasks">
-            <td [class.success]="!task.done">
+            <td [taskDone]="task.done" [class.success]="!task.done">
                 {{ task.name }}
             </td>
             <td style="width: 70px" class="text-center">
-                <input type="checkbox" [value]="task.id" [checked]="task.done">
+                <input type="checkbox" [value]="task.id" [checked]="task.done" (click)="changeStatus(task)">
             </td>
             <td class="text-center" style="width: 200px">
                 <a [routerLink]="['/tasks/edit', task.id]" title="Editar" alt="Editar" class="btn btn-xs btn-info">
