@@ -7,6 +7,7 @@ import { ConverterComponent } from './components';
 import { CurrencyService, ConverterService } from './services';
 import { NumbersDirective } from './directives';
 import { ModalRateComponent } from './utils';
+import { DateFormatPipe } from './pipes';
 
 
 
@@ -14,7 +15,8 @@ import { ModalRateComponent } from './utils';
   declarations: [
     ConverterComponent,
     NumbersDirective,
-    ModalRateComponent
+    ModalRateComponent,
+    DateFormatPipe
   ],
   imports: [
     CommonModule,
