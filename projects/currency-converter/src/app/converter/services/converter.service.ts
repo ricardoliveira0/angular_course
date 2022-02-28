@@ -7,7 +7,7 @@ import { Convert, ConvertResponse } from '../models';
 @Injectable()
 export class ConverterService {
 
-  private readonly BASE_URL = "http://data.fixer.io/api/latest?access_key=eba7130a5b2d720ce43eb5fcddd47cc3";
+  private readonly BASE_URL = "http://data.fixer.io/api/latest?access_key=d4af1c0333e25dfcf3a8f42ba9ded370";
 
   constructor(private http: HttpClient) {}
 
