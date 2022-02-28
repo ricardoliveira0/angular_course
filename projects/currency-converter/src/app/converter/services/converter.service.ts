@@ -60,7 +60,7 @@ export class ConverterService {
    * @param ConvertResponse response
    * @returns string
    */
-  dataCotacao(response: ConvertResponse): string {
+  ratesDate(response: ConvertResponse): string {
 
     if (response === undefined)
       return '';
