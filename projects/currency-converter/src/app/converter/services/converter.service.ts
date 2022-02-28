@@ -50,7 +50,7 @@ export class ConverterService {
     if (response === undefined)
       return '0';
 
-    return (1 / response.rates[convert.currencyFrom]).toFixed(4);
+    return (1 / response.rates[convert.currencyTo]).toFixed(4);
   
   }
 

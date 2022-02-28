@@ -42,7 +42,14 @@
 			value="Convert"
             (click)="convertion()"
             [disabled]="!convertForm.form.valid"
+			data-toggle="modal"
+			data-target="#modalRate"
 			class="btn btn-success">
 	  </form>
 	 </div>
+	 <modal-rate [id]="'modalRate'"
+	 [response]="convertResponse"
+	 [convert]="convert"
+	 (onConfirm)="startup()">
+	 </modal-rate>
 </div>
