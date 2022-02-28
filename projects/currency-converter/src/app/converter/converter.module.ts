@@ -5,12 +5,14 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { ConverterComponent } from './components';
 import { CurrencyService, ConverterService } from './services';
+import { NumbersDirective } from './directives';
 
 
 
 @NgModule({
   declarations: [
-    ConverterComponent
+    ConverterComponent,
+    NumbersDirective
   ],
   imports: [
     CommonModule,
