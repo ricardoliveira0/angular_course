@@ -1,1 +1,38 @@
-<p>converter works!</p>
+<br/>
+<div class="alert alert-danger" role="alert">
+	Error retrieving data. Try again.
+</div>
+<div class="panel panel-success">
+	<div class="panel-heading">
+		Select the currency to be converted
+	</div>
+	<div class="panel-body text-center">
+	  <form class="form-inline">
+		<input 
+			type="text" 
+			name="valor"
+			class="form-control text-right"
+			placeholder="0" 
+			required>
+		<select 
+			name="moedaDe"
+			class="form-control"
+			required>
+			<option>
+			</option>
+		</select>
+		<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+		<select
+			name="moedaPara"
+			class="form-control"
+			required>
+			<option>
+			</option>
+		</select>
+		<input 
+			type="submit" 
+			value="Convert"
+			class="btn btn-success">
+	  </form>
+	 </div>
+</div>
