@@ -108,19 +108,21 @@ export class TicTacToeService {
   play(posX: number, posY: number): void {
     
     //invalid play verification
-    if(this.matrix[posX][posY] !== this.EMPTY || this.win)
+    if(this.matrix[posX][posY] !== this.EMPTY || this.win) {
       return;
-
+    }
     this.matrix[posX][posY] = this._player;
     this.noMovements++;
     this.win = this.endGame(posX, posY, this.matrix, this._player);
     this._player = (this._player === this.X) ? this.O: this.X;
 
-    if(!this.win && this.noMovements < 9)
+    if(!this.win && this.noMovements < 9) {
       this.playCPU();
+    }
 
-    if(this.win !== false)
+    if(this.win !== false) {
       this._showFinal = true;
+    }
 
     if(!this.win && this.noMovements === 9) {
       this._player = 0;
@@ -270,7 +272,7 @@ export class TicTacToeService {
     let display: boolean = false;
 
     if(!this.win) {
-      return display
+      return display;
     }
 
     for(let pos of this.win) {
