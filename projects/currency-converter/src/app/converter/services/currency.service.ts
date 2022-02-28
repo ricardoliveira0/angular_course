@@ -7,7 +7,7 @@ import { Currency } from '../models';
 })
 export class CurrencyService {
 
-  private currencies: Currency[] = [];
+  private currencies: Currency[];
 
   constructor() { }
 
