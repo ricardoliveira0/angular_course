@@ -41,7 +41,7 @@
 			type="submit" 
 			value="Convert"
             (click)="convertion()"
-            
+            [disabled]="!convertForm.form.valid"
 			class="btn btn-success">
 	  </form>
 	 </div>
