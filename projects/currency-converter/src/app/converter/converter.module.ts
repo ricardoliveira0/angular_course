@@ -6,13 +6,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { ConverterComponent } from './components';
 import { CurrencyService, ConverterService } from './services';
 import { NumbersDirective } from './directives';
+import { ModalRateComponent } from './utils';
 
 
 
 @NgModule({
   declarations: [
     ConverterComponent,
-    NumbersDirective
+    NumbersDirective,
+    ModalRateComponent
   ],
   imports: [
     CommonModule,
