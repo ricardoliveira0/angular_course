@@ -20,7 +20,7 @@ export class ModalRateComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  newQueryy() {
+  newQuery() {
     this.onConfirm.emit();
     console.log("asd");
   }
