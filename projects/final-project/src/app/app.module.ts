@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardModule } from './dashboard';
 import { CalculatorModule } from './calculator';
+import { ConverterModule } from './converter';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { CalculatorModule } from './calculator';
     BrowserModule,
     DashboardModule,
     CalculatorModule,
+    ConverterModule,
     AppRoutingModule
   ],
   providers: [],
