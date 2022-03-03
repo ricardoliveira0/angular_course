@@ -1,0 +1,78 @@
+<div>
+    <h2>Tic Tac Toe</h2>
+    
+    <!-- start -->
+    <div class="principal" *ngIf="displayStart">
+      <a href="#" 
+         class="button" (click)="startGame()">
+         Start
+      </a>
+    </div><!-- start -->
+  
+    <!-- matrix -->
+    <div *ngIf="displayMatrix">
+      <ul>
+        <li class="kz-border-bottom kz-border-right"
+        [class.kz-img-x]="displayX(0, 0)"
+        [class.kz-img-o]="displayO(0, 0)"
+        [class.kz-win-color]="displayWin(0, 0)"
+        (click)="play(0, 0)"></li>
+        <li class="kz-border-bottom kz-border-right"
+        [class.kz-img-x]="displayX(0, 1)"
+        [class.kz-img-o]="displayO(0, 1)"
+        [class.kz-win-color]="displayWin(0, 1)"
+        (click)="play(0, 1)"></li>
+        <li class="kz-border-bottom"
+        [class.kz-img-x]="displayX(0, 2)"
+        [class.kz-img-o]="displayO(0, 2)"
+        [class.kz-win-color]="displayWin(0, 2)"
+        (click)="play(0, 2)"></li>
+        <li class="kz-border-bottom kz-border-right"
+        [class.kz-img-x]="displayX(1, 0)"
+        [class.kz-img-o]="displayO(1, 0)"
+        [class.kz-win-color]="displayWin(1, 0)"
+        (click)="play(1, 0)"></li>
+        <li class="kz-border-bottom kz-border-right"
+        [class.kz-img-x]="displayX(1, 1)"
+        [class.kz-img-o]="displayO(1, 1)"
+        [class.kz-win-color]="displayWin(1, 1)"
+        (click)="play(1, 1)"></li>
+        <li class="kz-border-bottom"
+        [class.kz-img-x]="displayX(1, 2)"
+        [class.kz-img-o]="displayO(1, 2)"
+        [class.kz-win-color]="displayWin(1, 2)"
+        (click)="play(1, 2)"></li>
+        <li class="kz-border-right"
+        [class.kz-img-x]="displayX(2, 0)"
+        [class.kz-img-o]="displayO(2, 0)"
+        [class.kz-win-color]="displayWin(2, 0)"
+        (click)="play(2, 0)"></li>
+        <li class="kz-border-right"
+        [class.kz-img-x]="displayX(2, 1)"
+        [class.kz-img-o]="displayO(2, 1)"
+        [class.kz-win-color]="displayWin(2, 1)"
+        (click)="play(2, 1)"></li>
+        <li
+        [class.kz-img-x]="displayX(2, 2)"
+        [class.kz-img-o]="displayO(2, 2)"
+        [class.kz-win-color]="displayWin(2, 2)"
+        (click)="play(2, 2)"></li>
+      </ul>
+    </div><!-- matrix --> 
+  
+    <!-- final -->
+    <div *ngIf="displayFinal">
+      <span>
+      <p *ngIf="player==2">You win!</p>
+      <p *ngIf="player==1">You lost :(</p>
+      <p *ngIf="player==0">The game finished by draw...</p>
+      <br />
+      <a href="#" 
+           class="button" (click)="newGame()">
+           Play again
+        </a>
+      </span>
+    </div><!-- final -->
+  
+  </div>
+  

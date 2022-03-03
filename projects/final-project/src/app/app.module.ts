@@ -7,6 +7,7 @@ import { DashboardModule } from './dashboard';
 import { CalculatorModule } from './calculator';
 import { ConverterModule } from './converter';
 import { TasksModule } from './tasks';
+import { TicTacToeModule } from './tic-tac-toe';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { TasksModule } from './tasks';
     CalculatorModule,
     ConverterModule,
     TasksModule,
+    TicTacToeModule,
     AppRoutingModule
   ],
   providers: [],
