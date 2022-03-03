@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { DashboardModule } from './dashboard';
 import { CalculatorModule } from './calculator';
 import { ConverterModule } from './converter';
+import { TasksModule } from './tasks';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ConverterModule } from './converter';
     DashboardModule,
     CalculatorModule,
     ConverterModule,
+    TasksModule,
     AppRoutingModule
   ],
   providers: [],
