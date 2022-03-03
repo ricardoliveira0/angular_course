@@ -27,7 +27,8 @@ export class TicTacToeComponent implements OnInit {
     return this.gameService.showFinal;
   }
 
-  startGame(): void {
+  startGame($event: any): void {
+    $event.preventDefault();
     this.gameService.startGame();
   }
 
@@ -51,7 +52,8 @@ export class TicTacToeComponent implements OnInit {
     return this.gameService.player;
   }
 
-  newGame(): void {
+  newGame($event: any): void {
+    $event.preventDefault();
     this.gameService.newGame();
   }
 

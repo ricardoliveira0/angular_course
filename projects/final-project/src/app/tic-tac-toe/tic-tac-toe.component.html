@@ -4,7 +4,7 @@
     <!-- start -->
     <div class="principal" *ngIf="displayStart">
       <a href="#" 
-         class="button" (click)="startGame()">
+         class="button" (click)="startGame($event)">
          Start
       </a>
     </div><!-- start -->
@@ -68,7 +68,7 @@
       <p *ngIf="player==0">The game finished by draw...</p>
       <br />
       <a href="#" 
-           class="button" (click)="newGame()">
+           class="button" (click)="newGame($event)">
            Play again
         </a>
       </span>
